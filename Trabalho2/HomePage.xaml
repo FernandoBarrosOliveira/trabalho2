@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="Trabalho2.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Trabalho2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SplitView x:Name="MySplitview" DisplayMode="CompactInline" IsPaneOpen="False" CompactPaneLength="40" 
+                   OpenPaneLength="150" HorizontalAlignment="Stretch" Height="620" 
+                   Margin="0,10,1,0" VerticalAlignment="Top">
+            <SplitView.Pane>
+                <StackPanel>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <Button x:Name="btnOpenMenu" Height="39" Width="44" FontFamily="Segoe MDL2 Assets"
+                                Content="&#xE700;" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                Background="Transparent" Tag="1" Click="btnOpenMenu_Click"></Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BtnTabuada" Height="39" Width="44" FontFamily="Segoe MDL2 Assets"
+                                Content="&#xE1C2;" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                Background="Transparent" Tag="2" Click="BtnTabuada_Click"></Button>
+                        <TextBlock Text="Tabuada" FontSize="18" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+
+                        <Button x:Name="BtnMedia" Height="39" Width="44" FontFamily="Segoe MDL2 Assets"
+                                Content="&#xE1D02;" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                Background="Transparent" Tag="3" Click="BtnMedia_click"></Button>
+                        <TextBlock Text="Media" FontSize="18" VerticalAlignment="Center" ></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BtnListagem" Height="39" Width="44" FontFamily="Segoe MDL2 Assets"
+                                Content="&#xE133;" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                Background="Transparent" Tag="3" Click="BtnListagem_Click"></Button>
+                        <TextBlock Text="Dicas" FontSize="18" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Grid>
+                    <Frame Name="FrameConteudo"/>
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
+    </Grid>
+</Page>

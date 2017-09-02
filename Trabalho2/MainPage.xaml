@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="Trabalho2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Trabalho2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="10">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="auto" Height="50">
+            <TextBlock Text="Registre-se" HorizontalAlignment="Left" FontSize="36"></TextBlock>
+        </StackPanel>
+        <TextBlock Text="Login" HorizontalAlignment="Left"></TextBlock>
+        <TextBox x:Name="edLogin" ></TextBox>
+        <TextBlock Text="Senha" HorizontalAlignment="Left"></TextBlock>
+        <PasswordBox x:Name="edSenha" ></PasswordBox>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="btEntra" Content="Entrar" Click="btEntra_Click"></Button>
+            <Button x:Name="btCadastro" Content="Cadastro" Click="btCadastro_Click"></Button>
+        </StackPanel>
+    </StackPanel>
+</Page>

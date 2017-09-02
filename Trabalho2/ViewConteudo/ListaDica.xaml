@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="Trabalho2.ViewConteudo.ListaDica"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Trabalho2.ViewConteudo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Trabalho2.Classes="using:Trabalho2.Classes"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="auto" Height="50">
+            <TextBlock Text="Dicas para estudantes" HorizontalAlignment="Left" FontSize="24"></TextBlock>
+        </StackPanel>
+        <ScrollViewer>
+            <ListView x:Name="ListViewAnotacao" Height="auto" ItemsSource="{x:Bind ListagemDica}" 
+                        Tapped="ListViewAnotacao_Tapped"
+                        ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.IsVerticalRailEnabled="True">
+                <ListView.ItemTemplate >
+                    <DataTemplate  x:DataType="Trabalho2.Classes:Dica" >
+                        <StackPanel Orientation="Horizontal" Margin="6">
+                            <SymbolIcon Symbol="Contact" Margin="0,0,12,0"/>
+                            <StackPanel>
+                                <TextBlock Text="{x:Bind Titulo}" FontWeight="Bold"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+    </StackPanel>
+</Page>

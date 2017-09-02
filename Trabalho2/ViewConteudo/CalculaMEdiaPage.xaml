@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="Trabalho2.ViewConteudo.CalculaMEdiaPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Trabalho2.ViewConteudo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="10">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="auto" Height="60">
+            <TextBlock Text="Calcule a sua média" HorizontalAlignment="Center" FontSize="36"></TextBlock>
+        </StackPanel>
+        <ComboBox x:Name="cbTipoMedia" Header="Tipo de Média" ItemsSource="{x:Bind TiposMedia}"
+                 SelectionChanged="cbTipoMedia_SelectionChanged" />
+        <TextBlock Text="Entre com a nota" HorizontalAlignment="Left"></TextBlock>
+        <TextBox x:Name="edNumero" ></TextBox>
+        <TextBlock x:Name="lbPeso" Text="Entre com o peso" HorizontalAlignment="Left" Visibility="Collapsed" ></TextBlock>
+        <TextBox x:Name="edPeso" Visibility="Collapsed" ></TextBox>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="auto">
+            <Button x:Name="btnAdiciona" Content="Entrar" HorizontalContentAlignment="Center" 
+                    HorizontalAlignment="Center" Click="btnAdiciona_Click"></Button>
+        </StackPanel>
+        <ListView x:Name="ListViewAdicaoNota" Height="auto" ItemsSource="{x:Bind ListaAdicao}"/>
+        <Image x:Name="imgFormulaImagem"></Image>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="auto">
+            <Button x:Name="btMEdia" Content="Calcula Média" HorizontalContentAlignment="Center" 
+                    HorizontalAlignment="Center" Click="btMEdia_Click"></Button>
+        </StackPanel>
+    </StackPanel>
+</Page>

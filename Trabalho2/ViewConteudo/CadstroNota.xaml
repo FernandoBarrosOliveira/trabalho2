@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="Trabalho2.ViewConteudo.CadstroNota"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Trabalho2.ViewConteudo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Text="Nota" HorizontalAlignment="Left"></TextBlock>
+        <TextBox x:Name="edNota" ></TextBox>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="btSalvar" Content="Salvar"></Button>
+            <Button x:Name="btCancelar" Content="Cancelar"></Button>
+        </StackPanel>
+
+    </StackPanel>
+</Page>
