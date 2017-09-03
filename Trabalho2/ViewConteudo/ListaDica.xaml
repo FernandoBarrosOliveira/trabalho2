@@ -14,20 +14,20 @@
             <TextBlock Text="Dicas para estudantes" HorizontalAlignment="Left" FontSize="24"></TextBlock>
         </StackPanel>
         <ScrollViewer>
-            <ListView x:Name="ListViewAnotacao" Height="auto" ItemsSource="{x:Bind ListagemDica}" 
-                        Tapped="ListViewAnotacao_Tapped"
-                        ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.IsVerticalRailEnabled="True">
-                <ListView.ItemTemplate >
-                    <DataTemplate  x:DataType="Trabalho2.Classes:Dica" >
-                        <StackPanel Orientation="Horizontal" Margin="6">
-                            <SymbolIcon Symbol="Contact" Margin="0,0,12,0"/>
-                            <StackPanel>
-                                <TextBlock Text="{x:Bind Titulo}" FontWeight="Bold"/>
-                            </StackPanel>
+        <ListView x:Name="ListViewAnotacao" Height="auto" ItemsSource="{x:Bind ListagemDica}" 
+                  Tapped="ListViewAnotacao_Tapped"
+                  ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.IsVerticalRailEnabled="True">
+            <ListView.ItemTemplate >
+                <DataTemplate  x:DataType="Trabalho2.Classes:Dica" >
+                    <StackPanel Orientation="Horizontal" Margin="6">
+                        <SymbolIcon Symbol="Contact" Margin="0,0,12,0"/>
+                        <StackPanel>
+                            <TextBlock Text="{x:Bind Titulo}" FontWeight="Bold"/>
                         </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         </ScrollViewer>
     </StackPanel>
 </Page>
